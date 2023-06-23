@@ -1,0 +1,63 @@
+.nav {
+  position: fixed;
+  z-index: 10;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: orangered;
+}
+
+/* Styles pour le menu déroulant sur les petits écrans */
+
+.menu {
+  display: block;
+}
+  
+.log {
+  width: 40%;
+  padding: 0;
+}
+  
+.start {
+  position: relative;
+  top: 35px;
+  left: 30px;
+}
+
+.logo_container {
+  display: flex;
+  width: 20%;
+  margin: auto 72px;
+  justify-content: center; 
+}
+
+.logo {
+  position: relative;
+  top: 20px;
+}
+
+.ul_link {
+  display: flex;
+  width: 40%;
+  padding: 0;
+  margin:  40px 0;
+  justify-content: space-around;
+}
+
+.link {
+  height: 30px;
+  color: white;
+  list-style: none;
+  font-weight: bold;
+}
+
+.link:hover {
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 50%);
+  }   
+}

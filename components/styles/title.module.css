@@ -1,0 +1,16 @@
+.h1 {
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    padding: 12px;
+    transition: .4s ease-in-out;
+    color: rgb(0, 0, 0);
+    border-radius: 8px;
+    border: 2px solid orangered;
+    margin: 90px 0 50px 0;
+}
+  
+  .h1:hover {
+   color: white;
+   background-color: orangered;
+}
