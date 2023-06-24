@@ -8,7 +8,7 @@ const Reserved = () => {
     <>
      <Nav />
       <main>
-        <Title title = "Réservations"/>
+        <Title title = "Réserver"/>
          <CalendarByDay />      
       </main>
      <Footer />

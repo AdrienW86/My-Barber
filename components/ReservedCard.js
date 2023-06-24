@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import { useThemeContext } from '../ThemeContextProvider'
+import { useThemeContext } from '../services/ThemeContextProvider'
 import {useRouter} from 'next/navigation'
 import Info from './Info'
 import { data } from '@/app/data'
@@ -20,7 +20,7 @@ const ReservedCard = (props) => {
             created : new Date()
         } 
      setInvoice(invoice)
-     localStorage.clear()
+     //localStorage.clear()
      if(invoice.service === "Coupe de la barbe Homme") {
       router.push('https://buy.stripe.com/test_6oE8wN6FqeGI87u6oo')
      }
@@ -31,7 +31,7 @@ const ReservedCard = (props) => {
       router.push('https://buy.stripe.com/test_3cs3ctaVG8ikfzWdQS')
      }   
      console.log(invoice.service)
-    // localStorage.clear()
+   
    } 
  
 

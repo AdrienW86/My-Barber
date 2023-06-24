@@ -19,10 +19,9 @@ const Nav = () =>  {
         setIsResponsive(true);
       } else {
         setIsResponsive(false);
-        setIsMenuOpen(false); // Ferme le menu si la fenêtre dépasse la limite de réactivité
+        setIsMenuOpen(false); 
       }
     };
-  // Écoute les événements de redimensionnement de la fenêtre
   window.addEventListener('resize', handleResize);
 
   // Vérifie la taille de l'écran lors du chargement initial
@@ -37,9 +36,10 @@ const Nav = () =>  {
   return (
    <nav className={styles.nav}>
       <ul className={styles.log}>    
-        <li> 
-          <Link href='/sign' className={styles.start}> 
+        <li>        
+          <Link href='/login' className={styles.start}> 
             <Image 
+              className={styles.svg}
               src={Log}
               width={!isResponsive ? 60 : 30}
               height={!isResponsive ? 60 : 30}
@@ -63,8 +63,9 @@ const Nav = () =>  {
       {!isResponsive
       ? 
         <ul className={styles.ul_link}>
-          <li className={styles.link}> <Link href='/services'> Services </Link></li>
-          <li className={styles.link}> <Link href='/reserve'> Réservations </Link></li>
+          <li className={styles.link}> <Link href='/prestations'> Services </Link></li>
+          <li className={styles.link}> <Link href='/reserve'> Réserver </Link></li>
+          <li className={styles.link}> <Link href='/contact'> Contact </Link></li>
         </ul> 
       : <Hamburger /> }      
    </nav>

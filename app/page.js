@@ -1,25 +1,15 @@
 import Nav from '@/components/Nav'
 import Footer from '../components/Footer'
-import { data } from './data'
+import Profil from '@/components/Home'
+
 
 const Home = () => {
-
-  console.log(data)
   return (
     <>
-     <Nav />
-     <main>
-     
-     
-
-    
-     
-         
-     
-    </main>
+     <Nav />   
+     <Profil /> 
     <Footer />
     </>
-   
   )
 }
 export default Home

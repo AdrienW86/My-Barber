@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { useThemeContext } from '../ThemeContextProvider'
+import { useThemeContext } from '../services/ThemeContextProvider'
 import styles from './styles/invoice.module.css'
 
  const Invoice = () => {

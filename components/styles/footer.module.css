@@ -1,6 +1,22 @@
 .footer {
+    display: flex;
+    flex-direction: column;
     bottom: 0;
     width: 100%;
-    height: 80px;
+    height: 100px;
+    padding: 30px;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    justify-content: center;
     background-color: orangered;
+}
+
+.logo {
+    margin: 0 auto;;
+    transform: rotate(180deg);
+}
+
+.p {  
+    margin: 0 auto 40px auto ;
 }

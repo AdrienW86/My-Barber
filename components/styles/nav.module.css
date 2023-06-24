@@ -8,6 +8,7 @@
   background-color: orangered;
 }
 
+.svg {fill: red;}
 /* Styles pour le menu déroulant sur les petits écrans */
 
 .menu {
@@ -26,16 +27,17 @@
 }
 
 .logo_container {
-  display: flex;
-  width: 20%;
+ 
   margin: auto 72px;
-  justify-content: center; 
+ 
 }
 
 .logo {
   position: relative;
+  z-index: 2;
   top: 20px;
 }
+
 
 .ul_link {
   display: flex;
@@ -56,8 +58,23 @@
   color: black;
 }
 
-@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(2, 50%);
-  }   
+@media ((min-width: 480px)and (max-width: 768px)) {
+  
+  .logo_container {
+    position: relative;
+   right: 2%;
+    
+  }
+  
 }
+
+@media (max-width: 480px) {
+  
+  .logo_container {
+    position: relative;
+    right: 1%;
+    
+  }
+  
+}
+

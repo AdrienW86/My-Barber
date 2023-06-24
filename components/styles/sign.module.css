@@ -1,0 +1,48 @@
+.container {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.link_container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.link {
+    width: 120px;
+    text-align: left;
+    transition: .4s ease-in-out;
+}
+
+.link:hover {
+    color: orangered
+}
+
+.link:nth-child(1) {
+    text-align: right;
+}
+
+.span {
+    width: 20px;
+    text-align: center;
+}
+.form {
+    margin: 40px 0;
+    padding: 16px;
+    border-radius: 16px;
+    border: 2px solid orangered
+}
+
+.box {
+    display: flex;
+    margin: 20px 0;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.btn {
+    margin: 10px auto;
+    width: 120px;
+}
