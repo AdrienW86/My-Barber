@@ -14,7 +14,7 @@ const Calendar = () => {
 
       const calendarContent = [];
       for (let hour = 9; hour <= 19; hour++) {
-        calendarContent.push(<Link href='/reserve/confirm' key={hour} className={styles.calendarHour}>{hour}:00</Link>);
+        calendarContent.push(<Link href='/reserve/confirm' key={hour} className={styles.calendarHour}>{hour}h00</Link>);
       }
 
       return calendarContent;
@@ -47,9 +47,10 @@ const Calendar = () => {
         hour: hour,
         isPayed: false,
     }
+   
     localStorage.setItem('date', confirmedDate.date)
     localStorage.setItem('hour', confirmedDate.hour)
-    console.table(confirmedDate) 
+  
   }
 
  

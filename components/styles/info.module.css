@@ -1,0 +1,15 @@
+.date, .question {
+    text-align: center;
+    letter-spacing: 0.1em;
+    line-height: 1.2em;
+}
+
+.date {
+    color: orangered; 
+}
+
+.question {
+  
+    font-weight: bold;
+    margin-top: 20px;
+}

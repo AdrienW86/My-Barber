@@ -5,7 +5,6 @@ import Title from '@/components/Title'
 import { data } from '../data'
 
 const Services = () => {
- 
   return (
     <>
      <Nav />

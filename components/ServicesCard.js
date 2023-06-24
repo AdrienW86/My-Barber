@@ -1,19 +1,8 @@
-'use client'
-
 import React from 'react'
-import { usePathname , useSearchParams} from 'next/navigation'
 import Image from 'next/image'
 import styles from './styles/card.module.css'
 
 const ServicesCard = (props) => {
-
-  const pathname = usePathname()
-  console.log(pathname)
-
-  const searchParams = useSearchParams()
- 
-  const search = searchParams.get('search')
-  console.log(search)
 
   return (
     <section className={styles.services_card}>

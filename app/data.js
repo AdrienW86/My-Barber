@@ -1,6 +1,6 @@
 import Haircut from '../assets/haircut2.jpg'
 import Barbcut from '../assets/barbcut.jpg'
-import Premium from '../assets/premium2.jpg'
+import Premium from '../assets/premium.jpg'
 
 export const data = [
   {
@@ -16,8 +16,8 @@ export const data = [
     picture: Haircut
   },
   {
-    title: "Coupe de cheveux + coupe de la barbe.",
-    description: "Coupe et soin des cheveux et de la barbe.",
+    title: "Coupe cheveux + barbe",
+    description: "Coupe et soin cheveux et barbe.",
     price: "25€",
     picture: Premium
   } 

@@ -1,17 +1,17 @@
 'use client'
 
 import React, { useState } from 'react'
+import { useThemeContext } from '../ThemeContextProvider'
 import {useRouter} from 'next/navigation'
+import Info from './Info'
 import { data } from '@/app/data'
 import ServicesCard from './ServicesCard'
 
 const ReservedCard = (props) => {
-    const [ticket, setTicket] = useState({})
-
+  const {invoice, setInvoice } = useThemeContext()
   const router = useRouter()
    
     const reserved = (e) => {
-        console.log(e.target)
         const invoice = {
             service: e.target.title,
             prix: e.target.value,
@@ -19,17 +19,26 @@ const ReservedCard = (props) => {
             hour: props.hour,
             created : new Date()
         } 
-     setTicket(invoice)
-     router.push('/reserve/validate')
-     console.log(e.target.value)
-     
+     setInvoice(invoice)
+     localStorage.clear()
+     if(invoice.service === "Coupe de la barbe Homme") {
+      router.push('https://buy.stripe.com/test_6oE8wN6FqeGI87u6oo')
+     }
+     if(invoice.service === "Coupe de cheveux Homme") {
+      router.push('https://buy.stripe.com/test_dR67sJ2pabuw4Vi145')
+     }
+     if(invoice.service === "Coupe cheveux + barbe") {
+      router.push('https://buy.stripe.com/test_3cs3ctaVG8ikfzWdQS')
+     }   
+     console.log(invoice.service)
+    // localStorage.clear()
    } 
-   console.table(ticket)
+ 
 
   return (
    <>
-    <p> Vous avez réservé le {props.date} pour {props.hour} </p>
-    <p> Pour quel service souhaiteriez-vous réserver ?</p>
+    <Info date = {props.date} hour = {props.hour} />
+   
     <section>
     {data.map((el, index) =>  {
             return <ServicesCard 
