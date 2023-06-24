@@ -1,5 +1,5 @@
 import Nav from '@/components/Nav'
-import ServicesCard from '../../components/ServicesCard'
+import ServicesCard from '@/components/ServicesCard'
 import Footer from '@/components/Footer'
 import Title from '@/components/Title'
 import { data } from '../data'

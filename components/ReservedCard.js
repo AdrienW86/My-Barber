@@ -1,14 +1,14 @@
 'use client'
 
 import React, { useState } from 'react'
-
-
+import {useRouter} from 'next/navigation'
 import { data } from '@/app/data'
 import ServicesCard from './ServicesCard'
-import styles from './styles/reserved.module.css'
 
 const ReservedCard = (props) => {
     const [ticket, setTicket] = useState({})
+
+  const router = useRouter()
    
     const reserved = (e) => {
         console.log(e.target)
@@ -20,6 +20,7 @@ const ReservedCard = (props) => {
             created : new Date()
         } 
      setTicket(invoice)
+     router.push('/reserve/validate')
      console.log(e.target.value)
      
    } 
@@ -29,7 +30,7 @@ const ReservedCard = (props) => {
    <>
     <p> Vous avez réservé le {props.date} pour {props.hour} </p>
     <p> Pour quel service souhaiteriez-vous réserver ?</p>
-    <section className={styles.card}>
+    <section>
     {data.map((el, index) =>  {
             return <ServicesCard 
               key = {index}
@@ -38,7 +39,6 @@ const ReservedCard = (props) => {
               description = {el.description}
               price = {el.price}
               btn = {reserved}
-              url='/reserve/validate'
             />
         })}   
     </section>

@@ -1,9 +1,20 @@
+'use client'
+
 import React from 'react'
+import { usePathname , useSearchParams} from 'next/navigation'
 import Image from 'next/image'
-import Link from 'next/link'
 import styles from './styles/card.module.css'
 
 const ServicesCard = (props) => {
+
+  const pathname = usePathname()
+  console.log(pathname)
+
+  const searchParams = useSearchParams()
+ 
+  const search = searchParams.get('search')
+  console.log(search)
+
   return (
     <section className={styles.services_card}>
       <h3 className={styles.h3}> {props.title} </h3>           
@@ -17,14 +28,13 @@ const ServicesCard = (props) => {
           />         
         </div>       
         <div className={styles.body_card_services}>        
-          <p className={styles.description_card}> {props.description} </p>          
+          <p className={styles.description_card}> {props.description} </p> 
             <button 
-              href={props.url}
               value={props.price}
               title={props.title}               
               className={styles.card_btn} 
               onClick={props.btn}> Réserver
-            </button>
+            </button>                
           <p className={styles.price}> {props.price} </p>
         </div> 
     </section>
