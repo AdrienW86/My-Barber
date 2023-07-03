@@ -9,11 +9,11 @@ const Profil = () => {
     const [name, setName] = useState(null)
     let valeur
     useEffect(() => {
-          
-        // Récupération d'une valeur depuis le localStorage
-        valeur = localStorage.getItem('name');
-        setName(valeur);
-         
+        if (typeof window !== 'undefined') { 
+            valeur = localStorage.getItem('name');
+            setName(valeur);
+            window.scrollTo(0, 0);
+        }
       }, []);
 
   return (
