@@ -11,9 +11,12 @@ const Reserve = () => {
   const [date, setDate] = useState()
   const [hour, setHour] = useState()
 
+  const reservedDate = localStorage.getItem('date')
+  const reservedHour = localStorage.getItem('hour')
+
   useEffect(() => {
-    setDate(localStorage.getItem('date'))
-    setHour(localStorage.getItem('hour'))   
+    setDate(reservedDate)
+    setHour(reservedHour)   
   }, []);
 
   return (
