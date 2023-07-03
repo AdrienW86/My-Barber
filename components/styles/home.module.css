@@ -73,14 +73,17 @@
 .p {
     color: rgb(0, 0, 0);
     margin : 20px 0;
+    font-weight: bold;
 }
 
 .p:nth-child(3) {
     font-weight: bold;
     margin-top: 20px;
-    color: rgb(255, 255, 255)
+    color: orangered
 }
 
 .hour {
+    padding: 8px;
     text-align: center;
+    background-color: white;
 }

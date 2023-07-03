@@ -8,7 +8,7 @@ import UserForm from './UserForm'
     <>  
       <UserForm 
         title = "Connexion"
-        btn ="Se connecter"
+        btn = "Se connecter"
         message ="Connexion réussie"
       />
     </>

@@ -19,7 +19,8 @@ const Reserve = () => {
       const reservedHour = localStorage.getItem('hour')
     
     setDate(reservedDate)
-    setHour(reservedHour)   
+    setHour(reservedHour)  
+    window.scrollTo(0, 0);
     }
   }, []);
 
