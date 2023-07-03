@@ -1,12 +1,30 @@
-import React from 'react'
+'use client'
+
+import React , { useEffect, useState } from 'react'
 import Link from 'next/link'
 import styles from './styles/home.module.css'
 
+
+
+
  const Profil = () => {
+
+    const [name, setName] = useState(null)
+    let valeur
+    useEffect(() => {
+        
+    
+        // Récupération d'une valeur depuis le localStorage
+        valeur = localStorage.getItem('name');
+        setName(valeur);
+    
+      
+      }, []);
+
   return (
     <section className={styles.home}>
         <h1 className={styles.h1}> Bienvenue 
-            <span className={styles.name}> orangered </span>
+            <span className={styles.name}> {name} </span>
         </h1>
         <section className={styles.intro}> 
             <h2 className={styles.h2_title}> Accueil </h2>

@@ -38,7 +38,6 @@ const ReservedCard = (props) => {
   return (
    <>
     <Info date = {props.date} hour = {props.hour} />
-   
     <section>
     {data.map((el, index) =>  {
             return <ServicesCard 
