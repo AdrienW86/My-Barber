@@ -29,7 +29,9 @@
 
 .article {
     text-align: center;
-    height: 400px;
+    height: auto;
+    min-height: 400px;
+    width: auto;
     padding: 32px;
     font-weight: 500;
     background: url('../../assets/banner_medium.jpg') no-repeat center ;

@@ -1,7 +1,6 @@
 import React from 'react'
 import Nav from '@/components/Nav'
 import Title from '@/components/Title'
-import Invoice from '@/components/Invoice'
 import Footer from '@/components/Footer'
 
 
@@ -11,8 +10,7 @@ const Validate = () => {
       <Nav />
       <main>
         <section>
-          <Title title = "Validation"/>
-          <Invoice />        
+          <Title title = "Validation"/>  
         </section>
       </main>
       <Footer />
