@@ -1,4 +1,5 @@
 'use client'
+
 import React from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
@@ -19,36 +20,14 @@ const ContactForm = () => {
   });
 
   const handleSubmit = (values, { resetForm }) => {
-    // Envoyer les données du formulaire à une adresse e-mail
-console.log(values)
-    // Exemple d'utilisation de l'API Fetch pour envoyer les données
-    // fetch('./api/contact', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json'
-    //   },
-    //   body: JSON.stringify(values)
-    // })
-    //   .then(response => {
-    //     if (response.ok) {
-          // Le formulaire a été soumis avec succès
-          resetForm();
-          alert('Votre message a été envoyé.');
-        // } else {
-        //   // Une erreur s'est produite lors de l'envoi du formulaire
-        //   alert('Une erreur s\'est produite. Veuillez réessayer plus tard.');
-        // }
-      // })
-      // .catch(error => {
-      //   console.error('Erreur:', error);
-      //   alert('Une erreur s\'est produite. Veuillez réessayer plus tard.');
-      // });
+    resetForm();
+    alert('Votre message a été envoyé.');
   };
 
   return (
    <main>
     <Title title = "Contact"/>
-     <h3> Une question ? </h3>
+     <h2> Une question ? </h2>
      <p className={styles.p}>Nous nous engageons à vous répondre dans les meilleurs délais.</p>
     <Formik
       initialValues={initialValues}
@@ -61,13 +40,11 @@ console.log(values)
           <Field placeholder="Votre nom" className={styles.input} type="text" id="name" name="name" />
           <ErrorMessage style={{ color: "red", textAlign: "center", margin: "10px 0" }} name="name" component="span" />
         </div>
-
         <div className={styles.box}>
           <label className={styles.label} htmlFor="email">Email:</label>
           <Field placeholder="Votre adresse email" className={styles.input} type="email" id="email" name="email" />
           <ErrorMessage style={{ color: "red", textAlign: "center", margin: "10px 0" }} name="email" component="span" />
         </div>
-
         <div className={styles.box}>
           <label className={styles.label}htmlFor="message">Message:</label>
           <Field placeholder="Votre message" className={styles.text} as="textarea" id="message" name="message" />
