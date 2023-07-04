@@ -95,9 +95,8 @@
 .text::placeholder {
     color: rgb(8, 8, 8);
     text-align: center;
-    line-height: 55px;
     background: #fff;
-    padding: 10px;
+   
 }
 
 .contact {
