@@ -12,8 +12,15 @@
     background-color: orangered;
 }
 
+.logo_container {
+  margin: 0 auto;
+    height: 100px;
+    width: 100px;
+}
+
 .logo {
-    margin: 0 auto;;
+    margin: 0 auto;
+   
     transform: rotate(180deg);
 }
 

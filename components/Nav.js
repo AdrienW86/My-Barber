@@ -50,10 +50,18 @@ const Nav = () =>  {
         <li>        
           <Link href='/login' onClick={signOut} className={styles.start}> 
             <Image 
-              className={styles.svg}
+              className={styles.login}
               src= {connected? On : Off }
-              width={!isResponsive ? 60 : 30}
-              height={!isResponsive ? 60 : 30}
+              width={50}
+              height={50}
+              alt='icône pour se connecter/déconnecter'
+              priority
+            /> 
+            <Image 
+              className={styles.login_small}
+              src= {connected? On : Off }
+              width={30}
+              height={30}
               alt='icône pour se connecter/déconnecter'
               priority
             /> 
@@ -70,15 +78,13 @@ const Nav = () =>  {
           priority
         />
       </Link>      
-      </div>
-      {!isResponsive
-      ? 
-        <ul className={styles.ul_link}>
+      </div>     
+        <ul className={`${styles.ul_link}`}>
           <li className={styles.link}> <Link href='/prestations'> Services </Link></li>
           <li className={styles.link}> <Link href='/reserve'> Réserver </Link></li>
           <li className={styles.link}> <Link href='/contact'> Contact </Link></li>
         </ul> 
-      : <Hamburger /> }      
+       <Hamburger className={styles.hamburger} />     
    </nav>
   )
 }

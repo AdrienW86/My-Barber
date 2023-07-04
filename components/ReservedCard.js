@@ -11,15 +11,15 @@ const ReservedCard = (props) => {
   const {invoice, setInvoice } = useThemeContext()
   const router = useRouter()
    
-    const reserved = (e) => {
-        const invoice = {
-            service: e.target.title,
-            prix: e.target.value,
-            date: props.date,
-            hour: props.hour,
-            created : new Date()
-        } 
-     setInvoice(invoice)
+  const reserved = (e) => {
+    const invoice = {
+      service: e.target.title,
+      prix: e.target.value,
+      date: props.date,
+      hour: props.hour,
+      created : new Date()
+    } 
+    setInvoice(invoice)
      //localStorage.clear()
      if(invoice.service === "Coupe de la barbe Homme") {
       router.push('https://buy.stripe.com/test_6oE8wN6FqeGI87u6oo')
@@ -30,11 +30,9 @@ const ReservedCard = (props) => {
      if(invoice.service === "Coupe cheveux + barbe") {
       router.push('https://buy.stripe.com/test_3cs3ctaVG8ikfzWdQS')
      }   
-     console.log(invoice.service)
-   
-   } 
+     console.log(invoice.service)  
+  } 
  
-
   return (
    <>
     <Info date = {props.date} hour = {props.hour} />
@@ -47,6 +45,9 @@ const ReservedCard = (props) => {
               description = {el.description}
               price = {el.price}
               btn = {reserved}
+              rel="preload"
+              as="style"
+              onload="this.onload=null;this.rel='stylesheet'"
             />
         })}   
     </section>

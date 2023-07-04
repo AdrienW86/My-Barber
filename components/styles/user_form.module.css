@@ -75,3 +75,33 @@
     color: white;
     background-color: orangered;
 }
+
+/* Only in contact form */
+
+.p {
+    text-align: center;
+    margin: 24px 0;
+}
+
+.text {
+    height: 84px;
+    margin: 10px 0;
+    border-radius: 16px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid orangered
+}
+
+.text::placeholder {
+    color: rgb(8, 8, 8);
+    text-align: center;
+    line-height: 55px;
+    background: #fff;
+    padding: 10px;
+}
+
+.contact {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}

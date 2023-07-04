@@ -78,3 +78,12 @@
 .menu_link:hover {
   color: white
 } 
+
+
+@media (min-width: 769px) {
+  
+  .hamburger_container{
+    display: none;
+  }
+ 
+}
